@@ -1,68 +1,91 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+  font-family: 'Coolvetica';
+  src: local('Coolvetica'), url(./assets/CoolveticaRg.otf) format('opentype');
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                            'embedded-opentype', and 'svg' */
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
+@font-face {
+  font-family: "FairfaxPonaHD";
+  src: url(./assets/FairfaxPonaHD.ttf) format("truetype");
 }
-a:hover {
-  color: #535bf2;
+
+body, html {
+  margin:0;
+  overflow-x:hidden;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: Coolvetica;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+body.sitelenpona {
+  font-family: FairfaxPonaHD;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
+:root{
+
+  height:100%;
   font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  overflow:visible;
+  
+
+  --body_background: #eadffe;
+  --accent_color: #f1ebfd;
+
+  --color_primary_100: #382bf0;
+  --color_primary_200: #5e43f3;
+  --color_primary_300: #7a5af5;
+  --color_primary_400: #9171f8;
+  --color_primary_500: #a688fa;
+  --color_primary_600: #ba9ffb;
+  
+  --color_bright_100: #bca2fc;
+  --color_bright_200: #d4c1fd;
+  --color_bright_300: #eadffe;
+  --color_bright_300: #ffffff;
+  
+  --color_surface_100: #1a1625;
+  --color_surface_200: #2f2b3a;
+  --color_surface_300: #46424f;
+  --color_surface_400: #5e5a66;
+  --color_surface_500: #76737e;
+  --color_surface_600: #908d96;
+  --text_color: #000000;
+
+  color: var(--text_color);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+[data-theme="dark"] {
+  --body_background: #2f2b3a;
+  --accent_color: #1a1625;
+  
+  --text_color: #ffffff;
+}
+
+.outlineText {
+  color: transparent;
+  -webkit-text-stroke: 0.03em var(--text_color);
+}
+
+.outlineText.outlineTextActive{
+  width:fit-content;
+  color:transparent;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 45%, var(--text_color) 45%, var(--text_color) 55%, transparent 55% , transparent);
+  background-clip: text;
+  background-repeat: repeat-x;
+  background-size: 200%;
+  font-weight:500;
+  animation:gradientAnimation 1s linear infinite;
+  background-repeat: repeat;
+}
+
+@keyframes gradientAnimation{
+  0%{
+    background-position:0% 0%;
   }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
+  
+  100%{
+    background-position:200% 0%;
   }
 }

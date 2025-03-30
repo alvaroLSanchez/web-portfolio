@@ -1,19 +1,16 @@
 import { StrictMode } from 'react'
 
 import './App.css'
-import Root from './pages/Root'
-import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import Routing from './routing/Routing'
+
+import "./i18n.ts";
+
 
 function App() {
-  
-  const mainRouter = createBrowserRouter([
-    {path:"/", element: <Root/>},
-    {path:"/test", element: <> a </>},
-  ]);
 
   return (
     <StrictMode>
-      <RouterProvider router={mainRouter}></RouterProvider>
+      <Routing />
     </StrictMode>
   )
 }

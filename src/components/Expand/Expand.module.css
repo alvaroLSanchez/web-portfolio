@@ -1,0 +1,15 @@
+.content {
+    overflow: hidden;
+    transition: height 0.3s ease-in-out;
+}
+
+.button {
+    text-align: center;
+    cursor:pointer;
+    user-select: none;
+}
+
+.container {
+    background-color: var(--body_background);
+    border-radius: 0.3em;
+}
