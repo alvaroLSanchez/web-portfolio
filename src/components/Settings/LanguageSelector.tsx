@@ -48,20 +48,24 @@ function LanguageSelector() {
         <div className={style.languageContainer}>
             <p className={style.settingsTitle}>{t("settings.language.title")}</p>
             <hr />
-            {
-                radio.buttonProps.slice(0, 2).map(props => {
-                    const { key, ...rest } = props;
-                    return <RadioButton key={key} {...rest} />;
-                })
-            }
+            <div className={style.radioGroup}>
+                {
+                    radio.buttonProps.slice(0, 2).map(props => {
+                        const { key, ...rest } = props;
+                        return <RadioButton key={key} {...rest} />;
+                    })
+                }
+            </div>
             <div>
                 <Expand buttonText={t("settings.language.extras")}>
-                    {
-                        radio.buttonProps.slice(2).map(props => {
-                            const { key, ...rest } = props;
-                            return <RadioButton key={key} {...rest} />;
-                        })
-                    }
+                    <div className={style.radioGroup}>
+                        {
+                            radio.buttonProps.slice(2).map(props => {
+                                const { key, ...rest } = props;
+                                return <RadioButton key={key} {...rest} />;
+                            })
+                        }
+                    </div>
                 </Expand>
             </div>
         </div>

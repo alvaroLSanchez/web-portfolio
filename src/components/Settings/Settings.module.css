@@ -1,7 +1,7 @@
 
 .settingsContainer {
-    width: 4em;
-    height: 4em;
+    width: 3em;
+    height: 3em;
     position:relative;
     overflow-x:visible;
 }
@@ -58,7 +58,6 @@
 
 .smallGear.smallGearSpin{
     animation-play-state: running;
-    
 }
 
 .smallGearContainer{
@@ -89,6 +88,7 @@
 }
 
 .settingsPanel {
+    z-index: 3;
     position:absolute;
     right: 0%;
     transform: translate(100%, 0);
@@ -109,10 +109,15 @@
 
 .settingsTitle{
     text-align: center;
-    font-size:2em;
     margin:0;
 }
 
 .languageContainer {
     padding: 0.1em;
+}
+
+.radioGroup {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2em;
 }

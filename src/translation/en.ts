@@ -5,6 +5,9 @@ export const enTranslation = {
             about: "ABOUT",
             contact: "CONTACT ME"
         },
+        footer: {
+            linkedin_title: "Follow me on linkedin!"
+        },
         settings: {
             theme: {
                 title: "Theme",
@@ -20,8 +23,13 @@ export const enTranslation = {
                 sitelenpona: "Sitelen Pona",
                 extras: "Extras"
             }
-            
         },
-        test: "a"
+        home: {
+            welcome: "Welcome to my site",
+            subtitle: "Here you can find my projects",
+            made_with: "Made possible by",
+            react: "React",
+            github_pages: "Github Pages"
+        }
     },
 }

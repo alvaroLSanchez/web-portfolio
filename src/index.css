@@ -23,12 +23,23 @@ body.sitelenpona {
   font-family: FairfaxPonaHD;
 }
 
+@media (min-width:850px) {
+  :root {
+    font-size: calc(0.75vw + 0.5rem);
+  }
+}
+
+@media (max-width:850px) {
+  :root {
+    font-size: calc(0.75vw + 0.3rem);
+  }
+}
+
 :root{
 
   height:100%;
-  font-size: 1em;
-  overflow:visible;
-  
+
+  overflow-x:hidden;
 
   --body_background: #eadffe;
   --accent_color: #f1ebfd;
@@ -69,6 +80,23 @@ body.sitelenpona {
 }
 
 .outlineText.outlineTextActive{
+  width:fit-content;
+  color:transparent;
+  background: repeating-linear-gradient(-45deg, transparent, transparent 45%, var(--text_color) 45%, var(--text_color) 55%, transparent 55% , transparent);
+  background-clip: text;
+  background-repeat: repeat-x;
+  background-size: 200%;
+  font-weight:500;
+  animation:gradientAnimation 1s linear infinite;
+  background-repeat: repeat;
+}
+
+.outlineTextHover {
+  color: transparent;
+  -webkit-text-stroke: 0.03em var(--text_color);
+}
+
+.outlineTextHover:hover{
   width:fit-content;
   color:transparent;
   background: repeating-linear-gradient(-45deg, transparent, transparent 45%, var(--text_color) 45%, var(--text_color) 55%, transparent 55% , transparent);

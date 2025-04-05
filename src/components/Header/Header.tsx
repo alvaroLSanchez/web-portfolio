@@ -11,7 +11,7 @@ function Header() {
             <div className={styles.nav}>
             {
                 mainNavPages.map(page=>{
-                    return <NavElement 
+                    return <NavElement
                     path={page.path}
                     text={t(page.textKey)}
                     key={page.path}>

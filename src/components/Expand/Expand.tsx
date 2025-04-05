@@ -2,7 +2,7 @@ import { useRef, useState } from "react";
 import style from "./Expand.module.css";
 
 interface ExpandProps {
-    children: React.ReactElement[];
+    children: React.ReactElement[] | React.ReactElement;
     buttonText: string;
 }
 

@@ -10,10 +10,12 @@ interface NavElementProps {
 
 function NavElement({ text, path }: NavElementProps) {
     const [hover, setHover] = useState(false);
+
     const location = useLocation();
+
     const isCurrentPage = location.pathname == path;
     let className = style.navElement + " ";
-
+    
     if (isCurrentPage) {
         className += style.active;
     } else {
@@ -27,7 +29,8 @@ function NavElement({ text, path }: NavElementProps) {
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}
             className={className}
-        >
+            state={{fromPath: location.pathname, toPath: path}}
+            >
             {text}
         </NavLink>
     );

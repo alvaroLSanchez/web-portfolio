@@ -1,28 +1,24 @@
-
-import { createHashRouter, RouterProvider } from 'react-router-dom'
-import RouterLayout from './RouterLayout';
+import { HashRouter, Route, Routes } from 'react-router-dom'
 import { mainNavPages } from './MainNavPages';
-
-
-
-const mainRouter = createHashRouter([
-  {
-    element: <RouterLayout />,
-    children:
-      mainNavPages.map(page=>{
-        return ({
-          path: page.path,
-          element: page.element
-        });
-      })
-  }
-
-]);
+import RouterLayout from './RouterLayout';
 
 function Routing() {
-    return(
-        <RouterProvider router={mainRouter} />
-    );
+  return (
+    <HashRouter>
+      <Routes>
+        <Route path="/" element={<RouterLayout />}>
+          {mainNavPages.map(page => {
+            return <Route
+              path={page.path}
+              key={page.path}
+              index={page.isMain}
+              element={page.element}
+            />
+          })}
+        </Route>
+      </Routes>
+    </HashRouter>
+  );
 }
 
 export default Routing;

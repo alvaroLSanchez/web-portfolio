@@ -5,12 +5,15 @@ export const esTranslation = {
             about: "ACERCA DE",
             contact: "CONTÁCTAME"
         },
+        footer: {
+            linkedin_title: "Sígueme en linkedin!"
+        },
         settings: {
             theme: {
                 title: "Tema",
                 default: "Por defecto",
-                dark: "Claro",
-                light: "Oscuro",
+                dark: "Oscuro",
+                light: "Claro",
             },
             language: {
                 title: "Lenguaje",
@@ -21,6 +24,12 @@ export const esTranslation = {
                 extras: "Extras"
             }
         },
-        test: "a"
+        home: {
+            welcome: "Bienvenid@ a mi página web",
+            subtitle: "Aquí puedes encontrar mis proyectos",
+            made_with: "Hecho posible por",
+            react: "React",
+            github_pages: "Github Pages"
+        }
     },
 }

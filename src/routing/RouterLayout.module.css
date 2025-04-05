@@ -2,7 +2,7 @@
     display: grid;
     min-height: 100dvh;
     grid-template-rows: auto 1fr auto;
-    color: var(--text_color)
-    
+    color: var(--text_color);
+    background-color: var(--body_background);
 }
 

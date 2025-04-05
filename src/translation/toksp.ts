@@ -5,6 +5,10 @@ export const tokSpTranslation = {
             about: "sona",
             contact: "o toki tawa mi"
         },
+        footer: {
+            //linkedin_title: "o lukin e lipu [lipu · ni ken · sin :] mi a!"
+            linkedin_title: "o lukin e lipu Likesin mi a!"
+        },
         settings: {
             theme: {
                 title: "kule",
@@ -21,6 +25,12 @@ export const tokSpTranslation = {
                 extras: "namako"
             }
         },
-        test: "a"
+        home: {
+            welcome: "o kama pona lon lipu mi",
+            subtitle: "lipu ni la pali mi li lon",
+            made_with: "lipu ni li ken lon tan ilo ni",
+            react: "ilo pali [lipu · jan ·]",
+            github_pages: "ilo poki [kiwen · tan ·] [pana e jasima ijo]"
+        }
     },
 }

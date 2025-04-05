@@ -4,16 +4,17 @@ export const mainNavPages = [
     {
       path: "/",
       textKey: "nav.home",
-      element: <Home></Home>
+      element: <Home />,
+      isMain: true
     },
     {
       path: "/about",
       textKey: "nav.about",
-      element: <p>ABOUT</p>
+      element: <p>Acerca de</p>
     },
     {
       path: "/contact",
       textKey: "nav.contact",
-      element: <p>CONTACT ME</p>
+      element: <p> Contacto </p>
     }
-  ];
+];

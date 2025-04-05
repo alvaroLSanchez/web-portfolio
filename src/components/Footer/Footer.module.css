@@ -1,4 +1,14 @@
 .container{
     padding:0.5em;
-    background-color: gray;
+    background-color: var(--accent_color);
+    display:flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: center;
+    gap: 1em;
+}
+
+.linkedinIcon {
+    width: 2em;
+    aspect-ratio: 1;
 }
